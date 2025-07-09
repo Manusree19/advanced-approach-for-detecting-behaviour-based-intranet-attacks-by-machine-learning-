@@ -1,0 +1,107 @@
+{% extends 'RUser/Header.html' %}    
+{% block userblock %}    
+    
+<link rel="icon" href="images/icon.png" type="image/x-icon" />    
+    
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet 
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">  
+ <style>  body  {background-  color:#000000;}    
+.container-fluid {padding:50px;}    
+.container{background-color:white;padding:50px;   }    
+#title{font-family: 'Fredoka One', cursive;    
+}    
+.text-uppercase{      font-family:    
+'Righteous', cursive;  }    
+.tweettext{    
+border: 2px solid yellowgreen;     width:   
+904px;     height: 202px;     overflow: scroll;      
+backgroundcolor:; }  
+.style1 {    
+color: #FF0000;   fontweight: bold; 
+}    
+.style4 {color: #FFFF00; font-weight: bold; }    
+.style6 {   fontsize: 24px;   color:   
+#FFFF00;   fontweight:  bold; }    
+.style7 {color: #FFFF00}    
+.style12 {font-size: 16px}    
+</style>    
+<body>    
+<div class="container-fluid">    
+<div class="container">   
+<div class="row">    
+<div class="col-md-5">    
+<form role="form" method="POST" > {% csrf_token %} <fieldset>    <p   	class="text-uppercase   	pull-center   	style1   style12">Prediction   Of   	<span  class="style1">Behaviour Based Intranet Attacks</span> !!! </p>    
+<hr>    
+    
+{% csrf_token %}    
+<table width="1013" align="center">    
+<tr>    
+<td   	height="54"  colspan="4"  bgcolor="#FF0000"><div   	align="center" class="style6">Enter Behaviour Based Intranet Attacks Datasets Details Here !!! </div></td>    
+</tr>    	
+<tr>    	 
+<td   	height="44"   	bgcolor="#FF0000"><div   	align="center"   
+Login_Frequency</div></td>    
+<td><input type="text" name="Login_Frequency"></td>    	class="style4">Enter   
+<td   	bgcolor="#FF0000"><div   	align="center"   
+Failed_Login_Attempts</div></td>    
+<td><input type="text" name="Failed_Login_Attempts"></td>    
+</tr>    
+<tr>    	class="style4">Enter   
+<td   	height="44"   bgcolor="#FF0000"><div   	align="center"  Data_Transferred_MB</div></td>    
+<td><input type="text" name="Data_Transferred_MB"></td>    	class="style4">Enter   
+<td  	bgcolor="#FF0000"><div  	align="center"  
+Session_Duration_Minutes</div></td>    	class="style4">Enter   
+<td><input type="text"  name="Session_Duration_Minutes"></td>    
+</tr>    
+<tr>    
+<td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter    Accessed_Files</div></td>    
+<td><input type="text" name="Accessed_Files"></td>    
+<td   	bgcolor="#FF0000"><div   	align="center"  	Password_Changes    	class="style4">Enter </div></td>    
+<td><input type="text" name="Password_Changes"></td>    
+</tr>    
+<tr>    
+<td   	height="44"   bgcolor="#FF0000"><div   	align="center"   	class="style4">Enter  IP_Location_Changes</div></td>    
+<td><input type="text" name="IP_Location_Changes"></td>    
+<td bgcolor="#FF0000"><div align="center" class="style4">Enter No Of    
+Malware_Detections</div></td>    
+<td><input type="text" name="Malware_Detections"></td>    
+</tr>    
+<tr>    
+<td   	height="44"   bgcolor="#FF0000"><div   	align="center"   	class="style4">Enter  Suspicious_URL_Clicks</div></td>    
+<td><input type="text" name="Suspicious_URL_Clicks"></td>    
+<td bgcolor="#FF0000"><div align="center" class="style4">Enter No Of    
+Time_Since_Last_Login_Hours</div></td>    
+<td><input type="text"  name="Time_Since_Last_Login_Hours"></td>    
+</tr>    
+<tr>    
+<td width="217">&nbsp;</td>    
+<td width="268"><input name="submit" type="submit" class="style1" value="Predict"></td>    
+</tr>    
+</table>    
+</fieldset>    
+</form>    
+    
+<form role="form" method="POST" >    
+{% csrf_token %}    
+<fieldset>    
+    
+<hr>    
+<div>    
+<table width="878" border="0" align="center" >    
+<tr><td width="614" height="55" bgcolor="#FF0000"><div align="center"><span class="style6">Prediction of Health Insurance Claim Fraud Status </span> <span class="style4">:: </span><span class="style7">--&gt;</span> </div></td>   
+<td width="254" bgcolor="#FFFFFF" style="color:red; fontsize:20px; fontfamily:fantasy"   
+><div  align="center"><strong>{{objs}}</strong></div></td>    
+</tr>    
+</table>    
+</fieldset>    
+</form>    
+</div>    
+<div class="col-md-2">    
+<!-------null------>    
+</div>    
+</div>        
+</div>    
+</div>    
+{% endblock %}    
+<tr>   

@@ -1,0 +1,101 @@
+{% extends 'SProvider/Header.html' %}    
+{% block researchblock %}    
+    
+<link rel="icon" href="images/icon.png" type="image/x-icon" />    
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">    
+<style>   	body   	{background-  
+color:#000000;}    
+.container-fluid {padding:50px;}    
+.container{background-color:white;padding:50px;   }    
+#title{font-family: 'Fredoka One', cursive;    
+}    
+.text-uppercase{           fontfamily:   
+'Righteous', cursive;    
+    
+}    
+.tweettext{   
+border: 2px solid  yellowgreen;     width: 1104px;     height: 442px;     overflow: scroll;     background-color:; }    
+.style1 {  color: #FF0000; font-weight: bold;   }    
+.style12 {color: #FFFF00; font-weight: bold; }    
+</style>    
+    
+<body>    
+<div class="container-fluid">    
+<div class="container">    
+    
+<div class="row">    
+<div class="col-md-5">    
+<form role="form" method="POST" >    
+{% csrf_token %}    
+<fieldset>    
+<p class="text-uppercase pull-center style1">View  Prediction Of Behaviour Based Intranet Attacks  Type !!! </p>    
+<hr>    
+<div class="tweettext">    
+<table border="5" bordercolor="#FF00FF">    
+    
+<tr> 
+<td   bgcolor="#FF00 <d  align="center"  
+style6">Login_Frequency</span></div></td>    	class="style12"> 	class="style8  
+ 
+<span  
+<td   	bgcolor="#FF0000"><div   	align="center"  style6">Failed_Login_Attempts</span></div></td>    	class="style12"><span  class="style8  
+class="style12"><span  class="style8  
+<td   	bgcolor="#FF0000"><div   	align="center"  style6">Data_Transferred_MB</span></div></td>     
+<td   	bgcolor="#FF0000"><div   	align="center"  style6">Prediction</span></div></td>    
+    
+                <td   bgcolor="#FF0000"><div   	align="center" class="style12"><span style6">Session_Duration_Minutes 	class="style8  
+</span></div></td>    		
+<td   	bgcolor="#FF0000"><div   	align="center"   style6">Accessed_Files</span></div></td>    
+  	class="style12"><span 	class="style8  
+<td   	bgcolor="#FF0000"><div   	align="center"   style6">Password_Changes</span></div></td>    	class="style12"><span 	class="style8  
+<td   	bgcolor="#FF0000"><div   	align="center"   style6">IP_Location_Changes</span></div></td>    	class="style12"><span 	class="style8  
+<td   	bgcolor="#FF0000"><div   	align="center"   style6">Malware_Detections</span></div></td>    	class="style12"><span 	class="style8  
+<td   	bgcolor="#FF0000"><div   	align="center"   style6">Suspicious_URL_Clicks</span></div></td>    	class="style12"><span 	class="style8  
+	<td   	bgcolor="#FF0000"><div   	align="center"   	class="style12"><span 	class="style8  
+style6">Time_Since_Last_Login_Hours</span></div></td>    	
+class="style12"><span   
+  	  	class="style8  
+ 	<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Login_Frequency}}</td>    	font-size:20px;   	fontfamily:fantasy"  
+ 	<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Failed_Login_Attempts}}</td>    	font-size:20px;   	font-family:fantasy"   
+ 	<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Data_Transferred_MB}}</td>    	font-size:20px;   	font-family:fantasy"   
+ 	<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Session_Duration_Minutes}}</td>    	font-size:20px;   	font-family:fantasy"   
+ 	<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Accessed_Files}}</td>    	font-size:20px;   	font-family:fantasy"   
+</tr>    
+{% for object in list_objects %}    
+<tr>    
+    
+ 
+ 	 
+<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Accessed_Files}}</td>    	font-size:20px;   	font-family:fantasy"  
+<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.IP_Location_Changes}}</td>    	font-size:20px;   	font-family:fantasy"  
+<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Malware_Detections}}</td>    	font-size:20px;   	font-family:fantasy"  
+<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Suspicious_URL_Clicks}}</td>    	font-size:20px;   	font-family:fantasy"  
+<td   	bgcolor="#FFFFFF"   	style="color:red;   
+>{{object.Time_Since_Last_Login_Hours}}</td>    	font-size:20px;   	font-family:fantasy"  
+<td   	bgcolor="#FFFFFF"   	style="color:red;   	font-size:20px;   	font-family:fantasy"  
+>{{object.Prediction}}</td>   </td>    
+{% endfor %}    
+</table>    
+</div>    
+</fieldset>    
+</form>    
+</div>    
+<div class="col-md-2">    
+<!-------null------>    
+</div>    
+</div>    
+</div>    
+</div>    
+{% endblock %}    
+<tr>    
